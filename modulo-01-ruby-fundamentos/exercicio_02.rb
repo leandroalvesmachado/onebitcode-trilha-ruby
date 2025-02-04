@@ -8,3 +8,30 @@
   que contém o primeiro nome e o sobrenome deve ser separada por um ponto (.), enquanto o sobrenome
   e a empresa devem ser separados pelo símbolo '@'.
 =end
+
+puts 'Gerador de E-mail'
+puts "\n"
+
+puts 'Informe o nome:'
+name = gets.chomp
+
+puts 'Informe o sobrenome:'
+lastname = gets.chomp
+
+puts 'Informe a empresa:'
+company = gets.chomp
+
+puts "\n"
+puts name, lastname, company
+puts "\n"
+
+email = ''
+email << name.downcase.split.join('.')
+email << '.'
+email << lastname.downcase.split.join('.')
+email << '@'
+email << company.downcase.split.join('.')
+email << '.com'
+
+puts "\n"
+puts email
