@@ -18,4 +18,4 @@ module Rectangle
 end
 
 puts Square.area(10) # 100
-puts Rectangle.area(20, 20) # 200
+puts Rectangle.area(20, 20) # 400
