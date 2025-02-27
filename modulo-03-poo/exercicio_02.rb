@@ -32,3 +32,10 @@ trans = FinancialTransaction.new("Fulano", "Sicrano", 1000, false)
 
 # #<FinancialTransaction:0x00007f5973784168 @to="Fulano", @from="Sicrano", @amount=1000, @completed=false>
 p trans
+
+p trans.to
+p trans.from
+p trans.amount
+p trans.completed
+trans.completed = true
+p trans.completed
