@@ -42,7 +42,7 @@ end
 
 class Carro < Veiculo
   attr_accessor :portas
-  
+
   def initialize(placa, marca, portas)
     super(placa, marca) # herdando atributos da classe Veiculo
     @portas = portas
