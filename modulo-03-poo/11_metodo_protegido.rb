@@ -19,7 +19,7 @@ class Game
       "#{@name}-#{@genre}-#{@multiplayer}-#{@versions}"
   end
 
-  def techinal_sheet
+  def technical_sheet
       puts "##Dados do Jogo##"
       puts "Nome do Jogo: #{@name}"
       puts "Gênero do Jogo: #{@genre}"
@@ -36,19 +36,19 @@ end
 
 game1 = Game.new("Fifa", "Esporte", true, [2018, 2019, 2020], 100)
 puts game1
-puts game1.techinal_sheet
+puts game1.technical_sheet
 
 # usa o método send para chamar um método privado ou protegido chamado discounted_price no objeto game1, passando 20 como argumento
 game1.send(:discounted_price, 20)
-puts game1.techinal_sheet
+puts game1.technical_sheet
 
 game2 = Game.new("Alan Wake", "Suspense", false, [], 200)
 puts game2
-puts game2.techinal_sheet
+puts game2.technical_sheet
 
 usa o método send para chamar um método privado ou protegido chamado discounted_price no objeto game1, passando 10 como argumento
 game2.send(:discounted_price, 10)
-puts game2.techinal_sheet
+puts game2.technical_sheet
 
 # Métodos privados/protegidos → Normalmente, métodos privados/protegidos não podem ser chamados
 # diretamente de fora da classe, mas send permite isso.

@@ -18,7 +18,7 @@ class Game
       "#{@name}-#{@genre}-#{@multiplayer}-#{@versions}"
   end
 
-  def techinal_sheet
+  def technical_sheet
       puts "##Dados do Jogo##"
       puts "Nome do Jogo: #{@name}"
       puts "Gênero do Jogo: #{@genre}"

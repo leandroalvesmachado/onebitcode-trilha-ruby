@@ -15,7 +15,7 @@ class Game
       "#{@name}-#{@genre}-#{@multiplayer}-#{@versions}"
   end
 
-  def techinal_sheet
+  def technical_sheet
       puts "##Dados do Jogo##"
       puts "Nome do Jogo: #{@name}"
       puts "Gênero do Jogo: #{@genre}"
@@ -25,7 +25,7 @@ end
 
 game1 = Game.new("Fifa", "Esporte", true, [2018, 2019, 2020], 100)
 puts game1
-puts game1.techinal_sheet
+puts game1.technical_sheet
 
 # Fifa-Esporte-true-[2018, 2019, 2020]
 # ##Dados do Jogo##
@@ -35,7 +35,7 @@ puts game1.techinal_sheet
 
 game2 = Game.new("Alan Wake", "Suspense", false, [], 200)
 puts game2
-puts game2.techinal_sheet
+puts game2.technical_sheet
 
 # Alan Wake-Suspense-false-[]
 # ##Dados do Jogo##
@@ -45,7 +45,7 @@ puts game2.techinal_sheet
 
 game3 = Game.new("A Way Out", "Ação", false, [], 30)
 puts game3
-puts game3.techinal_sheet
+puts game3.technical_sheet
 
 # A Way Out-Ação-false-[]
 # ##Dados do Jogo##
