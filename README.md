@@ -39,3 +39,18 @@ As principais operações DTL são:
 - **ROLLBACK** – Reverte uma transação não confirmada
 - **SAVEPOINT** – Define um ponto intermediário dentro de uma transação
 - **SET TRANSACTION** – Define características específicas para uma transação
+
+# Comando MongoDB (Terminal)
+
+** Tabelas são chamadas de Collections
+
+- show dbs;
+- use cruddb;
+- show collections;
+- db.createCollection('users')
+- show collections;
+- db.users.insertOne({name: "Fulano", email:"fulano@email.com", phone:"3243432"})
+- db.users.insertOne({name: "Test", email:"test@email.com", phone:"67687634"})
+- db.users.find({})
+- db.users.find({name:"Test"})
+- db.users.deleteOne({name:"Fulano"})
