@@ -75,3 +75,47 @@ before_action :authenticate_user!
   rails g pundit:install
 ```
 
+## Recriando banco e executando migrations
+```ruby
+  rails db:drop db:create db:migrate --trace
+```
+
+## Criar política para um modelo
+```ruby
+  rails g pundit:policy article
+```
+
+## Instalando a Gem Rolify
+### Serve para gerenciar papéis ou perfis (roles) de usuários em aplicações Rails. Ela é especialmente útil quando você precisa de um sistema flexível de autorização baseado em perfis, cargos ou permissões atribuídas a usuários, como "admin", "editor", "moderador", etc
+```ruby
+  bundle add rolify
+```
+### Gerar o model Role e configurar a associação com User
+```ruby
+  rails g rolify Role User
+```
+```ruby
+  rails db:migrate
+```
+
+### Adicionando papel
+```ruby
+  user1 = User.first
+```
+```ruby
+  user1.add_role :writer
+```
+```ruby
+  user2 = User.second
+```
+```ruby
+  user2.add_role :editor
+```
+
+### Verificar papel
+```ruby
+  user1.has_role? :admin
+```
+```ruby
+  user1.has_role? :writer
+```

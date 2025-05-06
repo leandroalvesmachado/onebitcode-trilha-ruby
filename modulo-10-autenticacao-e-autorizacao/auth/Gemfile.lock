@@ -180,6 +180,8 @@ GEM
     public_suffix (6.0.1)
     puma (6.6.0)
       nio4r (~> 2.0)
+    pundit (2.5.0)
+      activesupport (>= 3.0.0)
     racc (1.8.1)
     rack (3.1.13)
     rack-session (2.1.0)
@@ -228,6 +230,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.4.1)
+    rolify (6.0.1)
     rubyzip (2.4.1)
     securerandom (0.4.1)
     selenium-webdriver (4.31.0)
@@ -299,7 +302,9 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
+  pundit (~> 2.5)
   rails (~> 7.1.5, >= 7.1.5.1)
+  rolify (~> 6.0)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
