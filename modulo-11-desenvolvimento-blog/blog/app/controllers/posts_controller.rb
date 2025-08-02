@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: %i[show index] # verifica se o usuário esta autenticado
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
@@ -8,6 +9,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    # sempre que acessar o metodo, aumenta uma visualização
+    # o método .to_i, que já transforma nil em 0
+    @post.update(views: @post.views.to_i + 1)
   end
 
   # GET /posts/new
@@ -22,6 +26,7 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
