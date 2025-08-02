@@ -38,7 +38,7 @@
   rails db:migrate
 ```
 
-## Incluindo Comentários I
+## Incluindo Comentários I e II
 ```ruby
   rails g model comment post:belongs_to user:belongs_to
 ```
@@ -48,5 +48,6 @@
 ```ruby
   rails db:migrate
 ```
+## Listando Comentários
 
 

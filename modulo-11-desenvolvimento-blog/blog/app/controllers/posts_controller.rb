@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     # sempre que acessar o metodo, aumenta uma visualização
     # o método .to_i, que já transforma nil em 0
     @post.update(views: @post.views.to_i + 1)
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   # GET /posts/new
