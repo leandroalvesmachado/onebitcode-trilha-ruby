@@ -20,6 +20,34 @@
 ## RSpec
 * Site: https://rspec.info/
 
+## RSpec
+* Describe - Usado para descrever um grupo de exemplos de teste
+* Context - O contexto do caso de teste
+* It - Usado para definir um exemplo de teste específico
+* Expect - iniciar uma expectativa sobre um determinado objeto ou valor.
+* Eq -  usado para verificar se dois valores são iguais
+
+## Utilizando Before Hook
+* O before(:each) no RSpec serve para criar ou configurar algo antes de cada exemplo (it) dentro do contexto ou describe.
+
+## Utilizando Matchers
+* No RSpec, matchers são as ferramentas que comparam o valor que você está testando com o valor esperado.
+* Matchers são usados para comparar o valor testado com o valor esperado.
+
+| Categoria           | Matcher / Sintaxe                                           | Descrição |
+|---------------------|-------------------------------------------------------------|-----------|
+| **Igualdade**       | `eq(x)` / `eql(x)` / `equal(obj)`                            | `eq` compara com `==`, `eql` compara valor e tipo, `equal` verifica o mesmo objeto na memória |
+| **Comparação**      | `be > x`, `be >= x`, `be < x`, `be <= x`, `be_between(a,b)`  | Comparações numéricas |
+| **Tipos**           | `be_a(Class)`, `be_an(Class)`, `be_an_instance_of(Class)`    | Verifica classe ou tipo |
+| **Truthy / Falsy**  | `be_truthy`, `be_falsey`, `be true`, `be false`              | Verifica se é verdadeiro ou falso |
+| **Strings / Regex** | `match(/regex/)`, `start_with(str)`, `end_with(str)`         | Comparação de texto |
+| **Coleções**        | `include(x)`, `contain_exactly(...)`                         | Verifica itens presentes |
+| **Mudança de valor**| `change { var }.by(n)`, `.from(a).to(b)`                     | Verifica alteração de valores |
+| **Erros**           | `raise_error(ClasseErro)`                                    | Espera uma exceção |
+| **Compostos**       | `matcher1.and matcher2`, `matcher1.or matcher2`              | Combina matchers |
+
+
+
 ## Criar banco de dados (blog)
 ```ruby
   rails db:create
